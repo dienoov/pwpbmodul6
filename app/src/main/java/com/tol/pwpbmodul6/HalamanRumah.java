@@ -33,4 +33,9 @@ public class HalamanRumah extends AppCompatActivity {
     public void latihanSuta() {
         startActivity(new Intent(this, EdotJeneng.class));
     }
+
+    @OnClick(R.id.buffon_latihan_2)
+    public void latihanDua() {
+        startActivity(new Intent(this, Fragsi.class));
+    }
 }

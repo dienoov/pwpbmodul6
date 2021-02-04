@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pwpbmodul6">
-        <activity android:name=".EditJeneng"></activity>
+        <activity android:name=".Fragsi"></activity>
+        <activity android:name=".EditJeneng" />
         <activity android:name=".EdotJeneng" />
         <activity android:name=".HalamanRumah">
             <intent-filter>
