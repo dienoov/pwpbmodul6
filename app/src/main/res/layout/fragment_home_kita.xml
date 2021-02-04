@@ -39,7 +39,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="100dp"
                     android:src="@drawable/micke" />
 
                 <TextView
@@ -79,7 +79,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="100dp"
                     android:src="@drawable/variera" />
 
                 <TextView
@@ -126,7 +126,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="100dp"
                     android:src="@drawable/lerberg" />
 
                 <TextView
@@ -166,7 +166,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="100dp"
                     android:src="@drawable/korken" />
 
                 <TextView
