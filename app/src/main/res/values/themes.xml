@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Pwpbmodul6" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Pwpbmodul6" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/biru_arema</item>
+        <item name="colorPrimaryVariant">@color/biru_arema</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -12,5 +12,10 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+    
+    <style name="Widget.Design.BottomNavigationView.MenuKita" parent="Widget.Design.BottomNavigationView">
+        <item name="android:fontFamily">@font/biryani_bold</item>
+        <item name="android:textSize">12dp</item>
     </style>
 </resources>

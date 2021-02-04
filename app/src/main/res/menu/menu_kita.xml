@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ke_rumah"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:iconTint="@color/abu_gosok"
+        android:title="HOME" />
+
+    <item
+        android:id="@+id/cari_cari"
+        android:enabled="true"
+        android:icon="@drawable/ic_search"
+        android:iconTint="@color/abu_gosok"
+        android:title="SEARCH" />
+
+    <item
+        android:id="@+id/profil_kita"
+        android:enabled="true"
+        android:icon="@drawable/ic_user"
+        android:iconTint="@color/abu_gosok"
+        android:title="PROFILE" />
+
+</menu>

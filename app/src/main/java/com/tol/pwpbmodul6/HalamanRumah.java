@@ -38,4 +38,9 @@ public class HalamanRumah extends AppCompatActivity {
     public void latihanDua() {
         startActivity(new Intent(this, Fragsi.class));
     }
+
+    @OnClick(R.id.buffon_mandiri)
+    public void jalurMandiri() {
+        startActivity(new Intent(this, Mandiri.class));
+    }
 }
