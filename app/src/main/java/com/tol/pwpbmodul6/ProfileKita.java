@@ -1,12 +1,20 @@
 package com.tol.pwpbmodul6;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +22,18 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class ProfileKita extends Fragment {
+
+    @BindView(R.id.nama_kita)
+    TextView namaKita;
+
+    @BindView(R.id.nomer_kita)
+    TextView nomerKita;
+
+    @BindView(R.id.jenis_kita)
+    TextView jenisKita;
+
+    @BindView(R.id.tombol_kita)
+    Button tombolKita;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,6 +79,30 @@ public class ProfileKita extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile_kita, container, false);
+        View view = inflater.inflate(R.layout.fragment_profile_kita, container, false);
+
+        ButterKnife.bind(this, view);
+
+        if (getActivity().getIntent().hasExtra(EditProfileKita.EXTRA_KITA)) {
+            Siswo kita = (Siswo) getActivity().getIntent().getExtras().getParcelable(EditProfileKita.EXTRA_KITA);
+            namaKita.setText(kita.getJeneng());
+        }
+
+        return view;
+    }
+
+    @OnClick(R.id.tombol_kita)
+    public void editProfileKita() {
+        startActivityForResult(new Intent(getActivity(), EditProfileKita.class), Mandiri.RC_KITA);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if(requestCode == Mandiri.RC_KITA && resultCode == -1) {
+            Siswo kita = (Siswo) data.getParcelableExtra(EditProfileKita.EXTRA_KITA);
+            namaKita.setText(kita.getJeneng());
+            nomerKita.setText(kita.getNik());
+            jenisKita.setText(kita.getJenes());
+        }
     }
 }

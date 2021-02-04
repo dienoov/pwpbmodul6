@@ -1,13 +1,16 @@
 package com.tol.pwpbmodul6;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -16,6 +19,8 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class Mandiri extends AppCompatActivity {
+
+    public static final int RC_KITA = 169;
 
     @BindView(R.id.frame_kita)
     FrameLayout frameKita;

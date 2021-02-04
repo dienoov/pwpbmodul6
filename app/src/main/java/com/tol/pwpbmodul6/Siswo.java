@@ -15,21 +15,21 @@ public class Siswo implements Parcelable {
         }
     };
 
-    private long nik;
+    private String nik;
     private String jeneng;
-    private String kelas;
+    private String jenes;
 
-    public Siswo(long nik, String jeneng, String kelas) {
+    public Siswo(String nik, String jeneng, String jenes) {
         this.nik = nik;
         this.jeneng = jeneng;
-        this.kelas = kelas;
+        this.jenes = jenes;
     }
 
-    public long getNik() {
+    public String getNik() {
         return nik;
     }
 
-    public void setNik(long nik) {
+    public void setNik(String nik) {
         this.nik = nik;
     }
 
@@ -41,18 +41,18 @@ public class Siswo implements Parcelable {
         this.jeneng = jeneng;
     }
 
-    public String getKelas() {
-        return kelas;
+    public String getJenes() {
+        return jenes;
     }
 
-    public void setKelas(String kelas) {
-        this.kelas = kelas;
+    public void setJenes(String jenes) {
+        this.jenes = jenes;
     }
 
     public Siswo(Parcel in) {
-        this.nik = in.readLong();
+        this.nik = in.readString();
         this.jeneng = in.readString();
-        this.kelas = in.readString();
+        this.jenes = in.readString();
     }
 
     @Override
@@ -62,8 +62,8 @@ public class Siswo implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeLong(this.nik);
+        dest.writeString(this.nik);
         dest.writeString(this.jeneng);
-        dest.writeString(this.kelas);
+        dest.writeString(this.jenes);
     }
 }

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pwpbmodul6">
-        <activity android:name=".Mandiri"></activity>
+        <activity android:name=".EditProfileKita"></activity>
+        <activity android:name=".Mandiri" />
         <activity android:name=".Fragsi" />
         <activity android:name=".EditJeneng" />
         <activity android:name=".EdotJeneng" />
